@@ -1,7 +1,7 @@
 Pasos para mandar los updates
 
 git status (para ver el estado de la carpeta
-git add. (para subir)
+git add. (para subir todo)(es mala practica, hay que especificar el nombre del archivo a subir, no todo)
 git commit -m "y ponemos un mensaje" (para hacer el commit)
 git push origin main (para hacer el push y mandar. el main va a depender de la branch donde estas)
 
