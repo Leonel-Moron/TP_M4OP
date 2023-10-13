@@ -27,3 +27,6 @@ Para llevar un archivo de una branch al main
 git merge "nombre de la rama que quiero traer los cambios" (el merge se hace desde el main)
 
 
+cambios desde el branch ramaLeo
+
+
