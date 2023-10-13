@@ -10,7 +10,20 @@ git push origin main (para hacer el push y mandar. el main va a depender de la b
 Para clonar
 git clone "url"
 
+
 Para traer los cambios nuevos
 git pull origin "branch"
 
-hola leo
+
+Para crear una nueva branch
+git checkout -b "nombre de la branch nueva" 
+
+
+Para moverme de rama en rama
+git checkout "nombre de la rama a la cual quiero ir" (parecido a la creacion)
+
+
+Para llevar un archivo de una branch al main
+git merge "nombre de la rama que quiero traer los cambios" (el merge se hace desde el main)
+
+
