@@ -24,14 +24,20 @@ Para moverme de rama en rama
 git checkout "nombre de la rama a la cual quiero ir" (parecido a la creacion)
 
 
-Para mandar por primera vez tu branch al repositorio 
-git push --set-upstream origin ramaLeo
+Para mandar por primera vez tu branch al repositorio con los cambios
+git push --set-upstream origin "nombre de branch"
 
+Para mandar los cambios (recordar hacer primero add ., commit -m"" antes)
+git push origin "nombre de branch"
 
 Para llevar los cambios de una branch al main
 git merge "nombre de la rama que quiero traer los cambios" 
 (el merge se hace desde el main, mientras no se haga el main va a estar actualizado hasta su ultimo commit)
 
+
+
+Flujo de como se suben los cambios
+pc local ----> stage ----> commit ----> repositorio
 
 
 
