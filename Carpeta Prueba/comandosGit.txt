@@ -1,32 +1,37 @@
-Pasos para mandar los updates
+Pasos para mandar los cambios
 
 git status (para ver el estado de la carpeta
 git add. (para subir todo)(es mala practica, hay que especificar el nombre del archivo a subir, no todo)
 git commit -m "y ponemos un mensaje" (para hacer el commit)
 git push origin main (para hacer el push y mandar. el main va a depender de la branch donde estas)
 
+.........................
+Para clonar un repositorio
+git clone "url del repositorio"
 
-
-Para clonar
-git clone "url"
-
-
+........................
 Para traer los cambios nuevos
 git pull origin "branch"
 
-
+........................
 Para crear una nueva branch
 git checkout -b "nombre de la branch nueva" 
+o
+git branch "nombre de la branch nueva"
 
 
 Para moverme de rama en rama
 git checkout "nombre de la rama a la cual quiero ir" (parecido a la creacion)
 
 
-Para llevar un archivo de una branch al main
-git merge "nombre de la rama que quiero traer los cambios" (el merge se hace desde el main)
+Para mandar por primera vez tu branch al repositorio 
+git push --set-upstream origin ramaLeo
 
 
-cambios desde el branch ramaLeo
+Para llevar los cambios de una branch al main
+git merge "nombre de la rama que quiero traer los cambios" 
+(el merge se hace desde el main, mientras no se haga el main va a estar actualizado hasta su ultimo commit)
+
+
 
 
