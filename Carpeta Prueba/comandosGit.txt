@@ -36,8 +36,23 @@ git merge "nombre de la rama que quiero traer los cambios"
 
 
 
-Flujo de como se suben los cambios
-pc local ----> stage ----> commit ----> repositorio
+Flujo de los estadios de GIT
+pc local ----> stage ------> commit ---------> repositorio
+		add.	    commit -m           push origin
 
+
+Pasos para mandar desde una branch al main
+Estando desde una branch hay que mandar los cambios al repositorio. Entonces
+- git add .
+- git commit -m""
+- git push origin "nombre de la branch"
+
+Ya tenemos la branch en el repositorio. Ahora la queremos fusionar con el main
+Entonces nos movemos al main
+- git checkout main
+- git merge "nombre de la branch" (aca fusiono la branch con el main)
+- git push origin main		  (por ultimo subo los cambios al repositorio)
+
+Siempre el ultimo paso es el push, ya sea en branch o main, eso sube al repositorio.
 
 
