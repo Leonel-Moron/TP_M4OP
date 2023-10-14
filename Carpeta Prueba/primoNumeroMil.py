@@ -13,7 +13,7 @@ cont = 0
 listaPares = []
 
 for i in range(iterador):
-    if i % 2 == 0:
+    if i % 2 == 0 and i>0:
         listaPares.append(i)
         cont +=1
         if cont == 10:
