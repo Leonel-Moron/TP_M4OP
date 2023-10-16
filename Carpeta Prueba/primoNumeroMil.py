@@ -49,7 +49,7 @@ print("es el primo numero ", len(ListaPrimo), " el ", ListaPrimo[-1])
 #Con while podemos hacerlo infinito sin saber cuanto tenemos q iterar de antemano
 #Falta pasar a codigo para verificar si es primo un nro
 
-
+#hola bart
 
 numeroSumando = 0
 contadorWhile = 0
