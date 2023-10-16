@@ -1,4 +1,5 @@
 import time
+inicio = time.time()
 #Vamos a buscar el numero primo mil
 
 #Busquemos un iterador primero
@@ -49,7 +50,7 @@ print("es el primo numero ", len(ListaPrimo), " el ", ListaPrimo[-1])
 #Falta pasar a codigo para verificar si es primo un nro
 
 
-inicio = time.time()
+
 numeroSumando = 0
 contadorWhile = 0
 ListaWhile = []
@@ -57,7 +58,7 @@ while(True):
     if numeroSumando %2 == 0 and numeroSumando>0:
         ListaWhile.append(numeroSumando)
         contadorWhile +=1
-    if contadorWhile == 1000:
+    if contadorWhile == 1432:
         break
     numeroSumando +=1
 
