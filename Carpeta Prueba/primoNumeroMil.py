@@ -29,8 +29,8 @@ print(listaPares[-1])
 
 def esPrimo(num):
     cont = 0
-    for i in range(1,num+1): # Iteramos desde 1 hasta el numero que pasamos
-        if num%i == 0:       # Dividimos el numero por todos sus previos, si el resto es 0 sumamos al contador 1  
+    for i in range(1,num+1):    # Iteramos desde 1 hasta el numero que pasamos
+        if num%i == 0:          # Dividimos el numero por todos sus previos, si el resto es 0 sumamos al contador 1  
             cont +=1
     """"        
     La idea es que el primo es divisible por 1 y por si, 
@@ -38,10 +38,10 @@ def esPrimo(num):
     Sumamos la condicion num == 1 porque 1 es primo pero no puede cumplir la condicion contador == 2 
     """
     if cont == 2 or num == 1:
-        return True  #Si es primo retornamos un TRUE
+        return True             #Si es primo retornamos un TRUE
     else:
-        return False #Si no es primo retornamos un FALSE
-    # return True if cont == 2 or num == 1 else False #Operador ternario
+        return False            #Si no es primo retornamos un FALSE
+                                #return True if cont == 2 or num == 1 else False #Operador ternario
 
 """""
 numeroSumando = 0
