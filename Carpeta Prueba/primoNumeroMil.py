@@ -5,27 +5,10 @@ import time
 #El final del iterador va a ser primoNumeroMil = 1000
 #Seria un contador de corte el primo mil
 
-
 #Como calcular un primo???
 #Un numero que se divide por 1 por si mismo, o sea tiene 2 divisores que tienen resto = 0
 #Podemos usar el %2 como idea
 #Para limpiar codigo podemos poner que chequee si es primo en una funcion
-"""""
-iterador = 100
-cont = 0
-listaPares = []
-
-#Con for podemos iterar si ya sabemos cuanto queremos iterar de antemano
-for i in range(iterador):
-    if i % 2 == 0 and i>0:
-        listaPares.append(i)
-        cont +=1
-        if cont == 10:
-            break
-print(listaPares)
-print(listaPares[-1])
-"""
-
 
 def esPrimo(num):
     cont = 0
@@ -36,28 +19,13 @@ def esPrimo(num):
     La idea es que el primo es divisible por 1 y por si, 
     si contador > 2 significa que no es primo xq mas de 2 numeros lo dividieron con resto 0
     Sumamos la condicion num == 1 porque 1 es primo pero no puede cumplir la condicion contador == 2 
+    if cont =< 2: incluiria al 1, nos ahorramos escribir 1 condicion
     """
-    if cont == 2 or num == 1:
+    if cont <=2:                
         return True             #Si es primo retornamos un TRUE
     else:
         return False            #Si no es primo retornamos un FALSE
-                                #return True if cont == 2 or num == 1 else False #Operador ternario
-
-"""""
-numeroSumando = 0
-contadorWhile = 0
-ListaWhile = []
-while(True):
-    if numeroSumando %2 == 0 and numeroSumando>0:
-        ListaWhile.append(numeroSumando)
-        contadorWhile +=1
-    if contadorWhile == 1432:
-        break
-    numeroSumando +=1
-print("El numero par numero ", contadorWhile, " es: ", ListaWhile[-1])
-"""
-
-
+                                #return True if cont == 2 or num == 1 else False        #Operador ternario
 
 
 listaPrimo=[]    
@@ -70,14 +38,11 @@ while(True):                                #True loopea hasta que cortemos con 
     if esPrimo(aumentador):                 # Llamamos a la funcion para chequear si es primo
         listaPrimo.append(aumentador)       # Si la funcion nos devuelve un TRUE, guardamos el numero en una Lista
         contadorMil += 1                    # Y ademas aumentamos +1 el contador 
-    if contadorMil == 1000:                 # Cuando el contador llegue a 1000 cortamos
+    if contadorMil == 1000:                 # Cuando el contador llegue a 1000 cortamos, Podriamos escribir la condicion de corte en el While
         break                               # Cortamos el loop con un break, el contador ya tiene el nro primo MIL
     aumentador +=1                          # Aumentador para pasar a la funcion un numero cada vez mas grande
 
 
 print("El primo numero mil es: ", listaPrimo[-1])
-
-    
 fin = time.time()
-
 print("Tardamos para encontrarlo: ",fin - inicio)
