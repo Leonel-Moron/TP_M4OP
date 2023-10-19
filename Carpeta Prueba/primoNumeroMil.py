@@ -1,4 +1,4 @@
-import time
+import time #libreria para medir tiempo de ejecución
 #Vamos a buscar el numero primo mil
 
 #Busquemos un iterador primero
@@ -27,22 +27,22 @@ def esPrimo(num):
         return False            #Si no es primo retornamos un FALSE
                                 #return True if cont == 2 or num == 1 else False        #Operador ternario
 
+def buscarPrimoMil():
+    listaPrimo = []
+    aumentador = 1
+    contadorMil = 0
+    while(True):                                # True loopea hasta que cortemos con un break
+        if esPrimo(aumentador):                 # Llamamos a la funcion para chequear si es primo
+            listaPrimo.append(aumentador)       # Si la funcion nos devuelve un TRUE, guardamos el numero en una Lista
+            contadorMil += 1                    # Y ademas aumentamos +1 el contador 
+        if contadorMil == 1000:                 # Cuando el contador llegue a 1000 cortamos, Podriamos escribir la condicion de corte en el While
+            break                               # Cortamos el loop con un break, el contador ya tiene el nro primo MIL
+        aumentador +=1                          # Aumentador para pasar a la funcion un numero cada vez mas grande
+    return listaPrimo[-1]
 
-listaPrimo=[]    
-aumentador = 1
-contadorMil = 0
 
 inicio = time.time()
-
-while(True):                                #True loopea hasta que cortemos con un break
-    if esPrimo(aumentador):                 # Llamamos a la funcion para chequear si es primo
-        listaPrimo.append(aumentador)       # Si la funcion nos devuelve un TRUE, guardamos el numero en una Lista
-        contadorMil += 1                    # Y ademas aumentamos +1 el contador 
-    if contadorMil == 1000:                 # Cuando el contador llegue a 1000 cortamos, Podriamos escribir la condicion de corte en el While
-        break                               # Cortamos el loop con un break, el contador ya tiene el nro primo MIL
-    aumentador +=1                          # Aumentador para pasar a la funcion un numero cada vez mas grande
-
-
-print("El primo numero mil es: ", listaPrimo[-1])
+resultado = buscarPrimoMil()
+print("El primo numero mil es: ", resultado)
 fin = time.time()
-print("Tardamos para encontrarlo: ",fin - inicio)
+print("Tardamos para encontrarlo: ", fin - inicio)
