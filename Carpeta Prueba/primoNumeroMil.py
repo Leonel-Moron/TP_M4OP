@@ -1,4 +1,5 @@
 import time #libreria para medir tiempo de ejecución
+
 #Vamos a buscar el numero primo mil
 
 #Busquemos un iterador primero
@@ -18,10 +19,9 @@ def esPrimo(num):
     """"        
     La idea es que el primo es divisible por 1 y por si, 
     si contador > 2 significa que no es primo xq mas de 2 numeros lo dividieron con resto 0
-    Sumamos la condicion num == 1 porque 1 es primo pero no puede cumplir la condicion contador == 2 
-    if cont =< 2: incluiria al 1, nos ahorramos escribir 1 condicion
+    1 no es primo asi q para q sea primo es cont == 2
     """
-    if cont <=2:                
+    if cont == 2:                
         return True             #Si es primo retornamos un TRUE
     else:
         return False            #Si no es primo retornamos un FALSE
@@ -39,6 +39,7 @@ def buscarPrimoMil():
             break                               # Cortamos el loop con un break, el contador ya tiene el nro primo MIL
         aumentador +=1                          # Aumentador para pasar a la funcion un numero cada vez mas grande
     return listaPrimo[-1]
+
 
 
 inicio = time.time()
