@@ -27,11 +27,11 @@ def buscarPrimo(busqueda):
         aumentador +=1                          # Aumentador para pasar a la funcion un numero cada vez mas grande
     return listaPrimo[-1]                       # Devolvemos el ultimo primo q guardamos, el numero mil
 
-
+inicio = time.time()
 def mostrarPrimo():
     resultado = buscarPrimo(int((inp.get())))
     var1.set(resultado)
-    
+fin = time.time()
 def salir():
     ventana.destroy()
 
@@ -39,7 +39,7 @@ def salir():
 ventana = tk.Tk()                  
 ventana.geometry("400x400")
 
-lb1 = tk.Label(ventana, text="Ingrese el numero primo a buscar", font="ariel-black", background="blue")
+lb1 = tk.Label(ventana, text="Ingrese el numero primo a buscar", font="ariel-black", background="orange")
 lb1.pack(fill="x")
 
 inp = tk.Entry(ventana, border="5px", font="ariel-black")
@@ -53,11 +53,15 @@ bt2 = tk.Button(ventana, text = "Salir", font= "ariel-black", command = salir)
 bt2.pack()
 
 var1 = tk.StringVar()
-lb2 = tk.Label(ventana, textvariable= var1, font="ariel-black")
+
+lb2 = tk.Label(ventana, textvariable= var1, font="ariel-black", background="orange")
 lb2.pack()
 
-img = tk.PhotoImage(file= "")      
-lb3 = tk.Label(ventana, image= img)
-lb3.pack()
+lb3 = tk.Label(ventana, text= fin - inicio, background="orange")
+lb3.pack(fill="x")
+
+
+
+
 
 ventana.mainloop()
