@@ -1,10 +1,16 @@
-Pasos para mandar los cambios
+Flujo de los estadios de GIT
+pc local ----> stage ------> commit ---------> repositorio
+		add.	    commit -m           push origin
 
-git status (para ver el estado de la carpeta
-git add. (para subir todo)(es mala practica, hay que especificar el nombre del archivo a subir, no todo)
+
+Pasos para mandar los cambios: (recordar abrir la carpeta linkeada al repo con click derecho "git bash here")
+
+git status (para ver el estado de la carpeta)
+git add. (para guardar)
 git commit -m "y ponemos un mensaje" (para hacer el commit)
 git push origin main (para hacer el push y mandar. el main va a depender de la branch donde estas)
 
+(hasta que no se haga un git push todo está guardado localmente)
 .........................
 Para clonar un repositorio
 git clone "url del repositorio"
@@ -17,15 +23,16 @@ git pull origin "branch"
 Para crear una nueva branch
 git checkout -b "nombre de la branch nueva" 
 o
-git branch "nombre de la branch nueva"
+git branch "nombre de la branch nueva" (esta es mas usada parece)
 
 
 Para moverme de rama en rama
 git checkout "nombre de la rama a la cual quiero ir" (parecido a la creacion)
 
+..................... 
 
 Para mandar por primera vez tu branch al repositorio con los cambios
-git push --set-upstream origin "nombre de branch"
+git push --set-upstream origin "nombre de branch" (si se hace directo un push es lo mismo)
 
 Para mandar los cambios (recordar hacer primero add ., commit -m"" antes)
 git push origin "nombre de branch"
@@ -34,12 +41,7 @@ Para llevar los cambios de una branch al main
 git merge "nombre de la rama que quiero traer los cambios" 
 (el merge se hace desde el main, mientras no se haga el main va a estar actualizado hasta su ultimo commit)
 
-
-
-Flujo de los estadios de GIT
-pc local ----> stage ------> commit ---------> repositorio
-		add.	    commit -m           push origin
-
+...............................
 
 Pasos para mandar desde una branch al main
 Estando desde una branch hay que mandar los cambios al repositorio. Entonces

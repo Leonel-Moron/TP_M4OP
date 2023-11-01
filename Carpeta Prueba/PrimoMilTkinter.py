@@ -36,7 +36,7 @@ def salir():
     ventana.destroy()
 
 
-ventana = tk.Tk()                        
+ventana = tk.Tk()                  
 ventana.geometry("400x400")
 
 lb1 = tk.Label(ventana, text="Ingrese el numero primo a buscar", font="ariel-black", background="blue")
@@ -55,5 +55,9 @@ bt2.pack()
 var1 = tk.StringVar()
 lb2 = tk.Label(ventana, textvariable= var1, font="ariel-black")
 lb2.pack()
+
+img = tk.PhotoImage(file= "")      
+lb3 = tk.Label(ventana, image= img)
+lb3.pack()
 
 ventana.mainloop()
