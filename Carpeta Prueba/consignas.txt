@@ -13,3 +13,6 @@ variables)
 -generar una muestra de lo q generamos que tenga 
 sentido para lo que planteamos
 fecha de entrega ultimo dia
+
+
+cambiando ahora

@@ -31,6 +31,10 @@ def buscarPrimo(busqueda):
 
 
 def salir():
+    pg.mixer.init()
+    pg.mixer.music.load("Carpeta Prueba\sonido2.mp3")
+    pg.mixer.music.play()
+    time.sleep(3)
     root.destroy()
 
 def mostrarPrimo():
@@ -45,7 +49,6 @@ def mostrarPrimo():
     label3.grid(row=4,column=1, columnspan=2, padx=10,pady=10)
     pg.mixer.init()
     pg.mixer.music.load("Carpeta Prueba\sonido.mp3")
-    pg.mixer.music.set_volume(0.7)
     pg.mixer.music.play()
 
 root = tk.Tk()
