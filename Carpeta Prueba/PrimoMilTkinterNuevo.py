@@ -28,42 +28,43 @@ def buscarPrimo(busqueda):
     return listaPrimo[-1]                       # Devolvemos el ultimo primo q guardamos, el numero mil
 
 
-def mostrarPrimo():
-    resultado = buscarPrimo(int((inp.get())))
-    var1.set(resultado)
-
 
 def salir():
-    ventana.destroy()
+    root.destroy()
+
+def mostrarPrimo():
+    inicio = time.time()
+    resultado = buscarPrimo(int(inp2.get()))
+    fin = time.time()
+    tiempo = fin-inicio
+    label2 = tk.Label(miFrame, text="El primo numero "+ inp2.get() + " es el : " + str(resultado))
+    label2.grid(row=3,column=1, columnspan=2, padx=10,pady=10)
+    
+    label3 = tk.Label(miFrame, text= "Se tardó en encontrarlo: "+ str(tiempo) + "seg")
+    label3.grid(row=4,column=1, columnspan=2, padx=10,pady=10)
 
 
-ventana = tk.Tk()                  
-ventana.geometry("400x400")
+root = tk.Tk()
+root.config(background="dark blue", padx=20, pady=20)
+root.title("App para buscar numeros primos")
 
-
-lb1 = tk.Label(ventana, text="Ingrese el numero primo a buscar", font="ariel-black", background="orange")
-lb1.pack(fill="x")
-
-inp = tk.Entry(ventana, border="5px", font="ariel-black")
-inp.pack()
-
-bt1 = tk.Button(ventana, text = "Buscar", font= "ariel-black", command = mostrarPrimo)
-bt1.pack()
-
-
-bt2 = tk.Button(ventana, text = "Salir", font= "ariel-black", command = salir)
-bt2.pack()
-
-var1 = tk.StringVar()
-
-lb2 = tk.Label(ventana, textvariable= var1, font="ariel-black", background="orange")
-lb2.pack()
+miFrame = tk.Frame()
+miFrame.pack(expand="True")
 
 
 
+label1 = tk.Label(miFrame, text="Indique el numero primo que quiera buscar")
+label1.grid(row=0,column=1, columnspan=2, padx=10,pady=10)
 
+inp2 = tk.StringVar()
+inp = tk.Entry(miFrame, background="black", textvariable=inp2, foreground="green")
+inp.grid(row=1,column=1, columnspan=2,padx=10,pady=10)
 
+botonBuscar = tk.Button(miFrame, text="Buscar", command=mostrarPrimo)
+botonBuscar.grid(row=2,column=1, padx=10,pady=10)
 
+botonSalir = tk.Button(miFrame, text="Salir", command=salir)
+botonSalir.grid(row=2,column=2, padx=10,pady=10)
 
+root.mainloop()
 
-ventana.mainloop()
