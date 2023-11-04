@@ -1,5 +1,6 @@
 import time 
 import tkinter as tk
+import pygame as pg
 
 
 
@@ -28,9 +29,14 @@ def buscarPrimo(busqueda):
     return listaPrimo[-1]                       # Devolvemos el ultimo primo q guardamos, el numero mil
 
 
+
+pg.mixer.init()
+
 def mostrarPrimo():
     resultado = buscarPrimo(int((inp.get())))
     var1.set(resultado)
+    pg.mixer.music.load("Carpeta Prueba\sonido.mp3")
+    pg.mixer.music.play()
 
 
 def salir():

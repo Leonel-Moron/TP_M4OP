@@ -1,5 +1,6 @@
 import time 
 import tkinter as tk
+import pygame as pg
 
 
 
@@ -42,7 +43,10 @@ def mostrarPrimo():
     
     label3 = tk.Label(miFrame, text= "Se tardó en encontrarlo: "+ str(tiempo) + "seg")
     label3.grid(row=4,column=1, columnspan=2, padx=10,pady=10)
-
+    pg.mixer.init()
+    pg.mixer.music.load("Carpeta Prueba\sonido.mp3")
+    pg.mixer.music.set_volume(0.7)
+    pg.mixer.music.play()
 
 root = tk.Tk()
 root.config(background="dark blue", padx=20, pady=20)
