@@ -51,6 +51,7 @@ def mostrarPrimo():
     pg.mixer.music.load("Carpeta Prueba\sonido.mp3")
     pg.mixer.music.play()
 
+
 root = tk.Tk()
 root.config(background="dark blue", padx=20, pady=20)
 root.title("App para buscar numeros primos")
