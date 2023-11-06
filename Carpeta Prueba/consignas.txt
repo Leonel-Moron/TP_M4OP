@@ -1,0 +1,18 @@
+- primo numero mil
+- hacer un informe sobre resultado electoral
+de un candidato, que pueda posicionar mejor. 
+Descargar los datos del recuento parcial
+Buscar la cartografia de caba
+Podemos usar el censo del repo. (está el censo de
+caba)
+
+Informe en jupiter lab
+Armar la estructura de base de datos del censo (las 
+relaciones q tienen entre las tablas, cuales son las
+variables)
+-generar una muestra de lo q generamos que tenga 
+sentido para lo que planteamos
+fecha de entrega ultimo dia
+
+
+cambiando ahora

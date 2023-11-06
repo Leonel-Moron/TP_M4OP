@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
 Flujo de los estadios de GIT
 pc local ----> stage ------> commit ---------> repositorio
 		add.	    commit -m           push origin
 
+=======
+Flujo de los estadios de GIT
+pc local ----> stage ------> commit ---------> repositorio
+		add.	    commit -m           push origin
+
+>>>>>>> e8709bfe78fb0895cb2dbd4bcc5193d87219cfb7
 
 Pasos para mandar los cambios: (recordar abrir la carpeta linkeada al repo con click derecho "git bash here")
 
