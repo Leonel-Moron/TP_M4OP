@@ -32,7 +32,7 @@ def buscarPrimo(busqueda):
 
 def salir():
     pg.mixer.init()
-    pg.mixer.music.load("https://drive.google.com/file/d/1wDhrrNDXiGwUZMjCKRk0CLidj0UiTDXm/view?usp=drive_link")
+    pg.mixer.music.load("Carpeta Prueba\sonido2.mp3")
     pg.mixer.music.play()
     time.sleep(3)
     root.destroy()
