@@ -32,7 +32,7 @@ def buscarPrimo(busqueda):
 
 def salir():
     pg.mixer.init()
-    pg.mixer.music.load("Carpeta Prueba\sonido2.mp3")
+    pg.mixer.music.load("https://drive.google.com/file/d/1wDhrrNDXiGwUZMjCKRk0CLidj0UiTDXm/view?usp=drive_link")
     pg.mixer.music.play()
     time.sleep(3)
     root.destroy()
@@ -42,13 +42,14 @@ def mostrarPrimo():
     resultado = buscarPrimo(int(inp2.get()))
     fin = time.time()
     tiempo = fin-inicio
-    label2 = tk.Label(miFrame, text="El primo numero "+ inp2.get() + " es el : " + str(resultado))
+    label2 = tk.Label(miFrame, text="El primo numero "+ inp2.get() + " es el: " + str(resultado),font=("Helvetica", 15))
     label2.grid(row=3,column=1, columnspan=2, padx=10,pady=10)
     
-    label3 = tk.Label(miFrame, text= "Se tardó en encontrarlo: "+ str(tiempo) + "seg")
+    label3 = tk.Label(miFrame, text= "Se tardó en encontrarlo: "+ str(tiempo) + "seg", font=("Helvetica", 15))
     label3.grid(row=4,column=1, columnspan=2, padx=10,pady=10)
     pg.mixer.init()
     pg.mixer.music.load("Carpeta Prueba\sonido.mp3")
+    pg.mixer.music.set_volume(0.5)
     pg.mixer.music.play()
 
 
@@ -61,17 +62,17 @@ miFrame.pack(expand="True")
 
 
 
-label1 = tk.Label(miFrame, text="Indique el numero primo que quiera buscar")
+label1 = tk.Label(miFrame, text="Indique el numero primo que quiera buscar",font=("Helvetica", 15))
 label1.grid(row=0,column=1, columnspan=2, padx=10,pady=10)
 
 inp2 = tk.StringVar()
-inp = tk.Entry(miFrame, background="black", textvariable=inp2, foreground="green")
+inp = tk.Entry(miFrame, background="black", textvariable=inp2, foreground="green", font=("Helvetica", 15))
 inp.grid(row=1,column=1, columnspan=2,padx=10,pady=10)
 
-botonBuscar = tk.Button(miFrame, text="Buscar", command=mostrarPrimo)
+botonBuscar = tk.Button(miFrame, text="Buscar", command=mostrarPrimo, font=("Helvetica", 10))
 botonBuscar.grid(row=2,column=1, padx=10,pady=10)
 
-botonSalir = tk.Button(miFrame, text="Salir", command=salir)
+botonSalir = tk.Button(miFrame, text="Salir", command=salir, font=("Helvetica", 10))
 botonSalir.grid(row=2,column=2, padx=10,pady=10)
 
 root.mainloop()

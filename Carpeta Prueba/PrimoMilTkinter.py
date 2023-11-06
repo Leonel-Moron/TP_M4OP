@@ -4,6 +4,7 @@ import pygame as pg
 
 
 
+
 def esPrimo(num):               # Funcion para validar si el nro que reciba es Primo
     cont = 0
     for i in range(1,num+1):    # Iteramos desde 1 hasta el numero que pasamos
