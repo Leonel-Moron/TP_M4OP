@@ -2,28 +2,6 @@ import time #libreria para medir tiempo de ejecución
 
 #Vamos a buscar el numero primo mil
 
-<<<<<<< HEAD
-#acá lo que quiero hacer es definir un función que me diga si los numero son primos o no 
-def primo (numero):
-    if numero <= 1:
-        return False
-    #primero le digo que el 1 no 
-    for i in range (2, int ()): #la función range la pensé poque podes genera un secuencia, pero si tiene otra idea mejor 
-        if (numero%i==0) and (numero%1==0):
-            return True 
-        #y acá es donde se me rompe, porque no logro decirle que me determine si es par o no
-
-#pienso la segunda funcion que llame a la funcion anterior y que el contador corte cuando encuentre el numero 1000
-def primo_numero_mil ():
-    contador=0
-    while contador <1000: 
-        if primo (numero):
-            contador += 1
-            if contador==1000:
-                return #?? 
-resultado = primo_numero_mil ()
-print (resultado)
-=======
 #Busquemos un iterador primero
 #El final del iterador va a ser el numero ingresado por consola // primo mil
 #Seria un contador de corte el input
@@ -70,4 +48,3 @@ resultado = buscarPrimo(buscar)                 # Llamamos a la función, que a 
 fin = time.time()
 print("El numero primo", buscar, "es el:",resultado)
 print("Tardamos en encontrarlo: ", fin-inicio, " seg")
->>>>>>> ramaLeo
