@@ -1,4 +1,3 @@
-
 Flujo de los estadios de GIT
 pc local ----> stage ------> commit ---------> repositorio
 		add.	    commit -m           push origin
