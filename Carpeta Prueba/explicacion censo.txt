@@ -1,0 +1,3 @@
+hogar = trae datos numericos nada mas, numeros q hacen referencias a otras tablas
+
+son 150.326 filas ¿que son?
