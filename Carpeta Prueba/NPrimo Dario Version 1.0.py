@@ -27,3 +27,4 @@ for num in range(1,1000):
     #si el contador quedo con el valor de cero el numero es primo
     if cont==0 
     print(num)
+    #asdasdasdasd
